@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.requirements_hash
+.install.lock
+uv.lock

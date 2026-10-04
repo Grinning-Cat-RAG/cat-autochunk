@@ -1,0 +1,8 @@
+[project]
+name = "cat-autochunk"
+version = "0.1.0"
+description = "Grinning Cat plugin: metaheuristic optimization of the chunker and scheduled re-ingestion of the datalake."
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "pyvolutionary>=2.6.5",
+]

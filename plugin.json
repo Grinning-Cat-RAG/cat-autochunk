@@ -1,0 +1,9 @@
+{
+    "name": "AutoChunk",
+    "description": "Periodically finds the best chunker (and its parameters) for the datalake of a Cheshire Cat through metaheuristic optimization (pyVolutionary), then re-ingests the whole datalake with it.",
+    "author_name": "Matteo Cacciola",
+    "plugin_url": "https://github.com/Grinning-Cat-RAG/cat-autochunk",
+    "tags": "chunker, optimization, rag, ingestion, cron, pyvolutionary",
+    "thumb": "",
+    "version": "0.1.0"
+}
