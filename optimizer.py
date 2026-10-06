@@ -175,9 +175,6 @@ async def run_optimization(
         return outcome
 
     class ChunkerOptimizationTask(Task):
-        # pyVolutionary declares the seed as a float, which numpy>=2 refuses in np.random.seed
-        seed: int | None = None
-
         def objective_function(self, x: List[float]) -> float:
             return self.data["objective"](x)
 

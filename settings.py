@@ -32,7 +32,12 @@ class AutoChunkSettings(BaseModel):
         description="Extra parameters of the algorithm configuration (e.g. {\"c1\": 0.1, \"c2\": 0.1, \"w\": [0.35, 1]} "
                     "for ParticleSwarmOptimization). population_size and max_cycles are set by the fields below.",
     )
-    population_size: int = Field(default=8, ge=2, description="Number of agents of the population.")
+    population_size: int = Field(
+        default=8,
+        ge=2,
+        description="Number of agents of the population. Some algorithms need more agents (e.g. 3 for "
+                    "GreyWolfOptimization, 4 for BeeColonyOptimization): pyVolutionary reports the minimum.",
+    )
     max_cycles: int = Field(default=6, ge=1, description="Maximum number of generations of the optimizer.")
     max_evaluations: int = Field(
         default=60,

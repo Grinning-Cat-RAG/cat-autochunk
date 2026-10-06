@@ -73,7 +73,7 @@ extracted by the multimodal ingestion) are not part of the datalake.
 | `cron_expression` | `0 3 * * 0` | 5-field cron expression, UTC (crontab semantics: `0`/`7` = Sunday). |
 | `algorithm` | `GreyWolfOptimization` | pyVolutionary optimizer class (see `GET /autochunk/algorithms`). |
 | `algorithm_parameters` | `{}` | Extra parameters of the algorithm configuration, e.g. `{"c1": 0.1, "c2": 0.1, "w": [0.35, 1]}` for `ParticleSwarmOptimization`. |
-| `population_size` | `8` | Population of the optimizer. |
+| `population_size` | `8` | Population of the optimizer. Some algorithms need more agents (e.g. 3 for `GreyWolfOptimization`, 4 for `BeeColonyOptimization`): pyVolutionary reports the minimum. Parameters in `algorithm_parameters` bounded by the population (e.g. `n_elites` of `BiogeographyBasedOptimization`) must fit it. |
 | `max_cycles` | `6` | Generations of the optimizer. |
 | `max_evaluations` | `60` | Budget of distinct configurations evaluated per run. |
 | `max_runtime_minutes` | `120` | Time budget of the optimization. |
@@ -113,7 +113,7 @@ configuration with their metrics (fitness, MRR, hit rate, average chunk size), a
 
 - the core plugin White Rabbit (scheduling);
 - a configured LLM (questions generation) and embedder;
-- `pyvolutionary` (installed by the Cat from `pyproject.toml`).
+- `pyvolutionary` >= 2.7.0 (installed by the Cat from `pyproject.toml`).
 
 ## Development
 
