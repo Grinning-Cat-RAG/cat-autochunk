@@ -113,7 +113,7 @@ configuration with their metrics (fitness, MRR, hit rate, average chunk size), a
 
 - the core plugin White Rabbit (scheduling);
 - a configured LLM (questions generation) and embedder;
-- `pyvolutionary` >= 2.7.0 (installed by the Cat from `pyproject.toml`).
+- `pyvolutionary` >= 2.7.1 (installed by the Cat from `pyproject.toml`).
 
 ## Development
 
